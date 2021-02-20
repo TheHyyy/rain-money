@@ -1,0 +1,20 @@
+<template>
+  <div>
+    <Layout>
+      我是Lables
+    </Layout>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      msg: '',
+    }
+  },
+  methods: {},
+}
+</script>
+
+<style scoped></style>
