@@ -15,6 +15,13 @@ module.exports = {
       .loader('svg-sprite-loader')
       .options({ extract: false })
       .end()
+      .use('svgo-loader')
+      .loader('svgo-loader')
+      .tap((options) => ({
+        ...options,
+        plugins: [{ removeAttrs: { attrs: 'fill' } }],
+      }))
+      .end()
     config
       .plugin('svg-sprite')
       // eslint-disable-next-line @typescript-eslint/no-var-requires
