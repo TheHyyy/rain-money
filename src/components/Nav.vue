@@ -47,7 +47,7 @@ nav {
   > .item.selected {
     color: #1276db;
     font-size: 14px;
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.25);
   }
 }
 </style>

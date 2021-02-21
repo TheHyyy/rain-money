@@ -1,21 +1,31 @@
 <template>
-  <div>
-    <Layout>
-      <p>你好，我是Money</p>
-    </Layout>
-  </div>
+  <Layout class-prefix="layout">
+    <div class="la">
+      <div class="la2">
+        <Tags />
+        <Notes />
+        <Types />
+        <NumberPad />
+      </div>
+    </div>
+  </Layout>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      msg: '',
-    }
-  },
+<script lang="ts">
+import NumberPad from '@/components/Money/NumberPad.vue'
+import Types from '@/components/Money/Types.vue'
+import Notes from '@/components/Money/Notes.vue'
+import Tags from '@/components/Money/Tags.vue'
 
-  methods: {},
+export default {
+  name: 'Money',
+  components: { Tags, Notes, Types, NumberPad },
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss">
+.layout-content {
+  display: flex;
+  flex-direction: column-reverse;
+}
+</style>
