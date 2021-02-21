@@ -7,28 +7,23 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'Types',
-  props: ['xxx'],
-  data() {
-    return {
-      type: '-', // 减号'-'表示支出，  加号'+'表示收入
+<script lang="ts">
+import Vue from 'vue'
+import { Component } from 'vue-property-decorator'
+
+@Component
+export default class Types extends Vue {
+  type = '-' // 减号'-'表示支出，  加号'+'表示收入
+
+  // 更改支出或收入状态
+  selectType(type: string) {
+    // 传过来的type 只能是  '-' 或 '+'
+    if (type !== '-' && type !== '+') {
+      throw new Error('type is unknown')
     }
-  },
-  mounted() {
-    console.log(this.xxx)
-  },
-  methods: {
-    selectType(type) {
-      // 传过来的type 只能是  '-' 或 '+'
-      if (type !== '-' && type !== '+') {
-        throw new Error('type is unknown')
-      }
-      this.type = type
-      console.log(this.type)
-    },
-  },
+    this.type = type
+    console.log(this.type)
+  }
 }
 </script>
 

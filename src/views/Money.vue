@@ -4,7 +4,7 @@
       <div class="la2">
         <Tags />
         <Notes />
-        <Types xxx="hi" />
+        <Types :xxx="333" />
         <NumberPad />
       </div>
     </div>
