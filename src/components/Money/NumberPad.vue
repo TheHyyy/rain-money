@@ -70,7 +70,7 @@ export default class NumberPad extends Vue {
   }
   // 提交 ok事件
   ok() {
-    console.log('ok')
+    this.$emit('update:value', this.output)
   }
 }
 </script>
