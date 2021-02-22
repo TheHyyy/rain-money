@@ -28,6 +28,8 @@ type Record = {
   type: string
   // eslint-disable-next-line @typescript-eslint/member-delimiter-style
   amount: number
+  // eslint-disable-next-line @typescript-eslint/member-delimiter-style
+  created?: Date
 }
 
 @Component({
@@ -35,7 +37,9 @@ type Record = {
 })
 export default class Money extends Vue {
   tags = ['衣', '食', '住', '行', '运动']
-  recordList: Record[] = []
+  recordList: Record[] = JSON.parse(
+    window.localStorage.getItem('recordList') || '',
+  )
   record: Record = { tags: [], notes: '', type: '-', amount: 0 }
   onUpdateTags(value: string[]) {
     this.record.tags = value
@@ -56,6 +60,7 @@ export default class Money extends Vue {
   }
   saveRecord() {
     const record2 = JSON.parse(JSON.stringify(this.record))
+    record2.createdAt = new Date()
     this.recordList.push(record2)
     console.log(this.recordList)
   }
