@@ -1,16 +1,23 @@
 <template>
   <div>
     <Layout>
-      我是EditLabel
+      <div>
+        <Icon name="left" />
+        <span>我是EditLabel</span>
+      </div>
+      <Notes filed-name="标签名" placeholder="请输入标签名" />
     </Layout>
   </div>
 </template>
 
 <script>
-import tagListModel from '@/models/tagListModel'
 import Vue from 'vue'
 import { Component } from 'vue-property-decorator'
-@Component
+import tagListModel from '@/models/tagListModel'
+import Notes from '@/components/Money/Notes.vue'
+@Component({
+  components: { Notes },
+})
 export default class EditLabel extends Vue {
   created() {
     const id = this.$route.params.id
