@@ -23,6 +23,8 @@ interface Window {
     name: string,
   ) => 'success' | 'not found' | 'duplicated';
   findTag: (id: string) => Tag | undefined;
+  recordList: RecordItem[];
+  createRecord: (record: RecordItem) => void;
 }
 const localStorageKeyName = 'tagList'
 type RecordItem = {
