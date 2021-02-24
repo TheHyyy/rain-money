@@ -23,7 +23,6 @@ window.createRecord = (record: RecordItem) => {
 window.tagList = tagListModel.fetch()
 // 增
 window.createTag = (name: string) => {
-  const message = window.prompt('请输入标签名')
   if (name) {
     const message = tagListModel.create(name)
     if (message === 'duplicated') {

@@ -15,7 +15,7 @@
         />
       </div>
       <div class="button-wrapper">
-        <Button @click="remove" t>删除标签</Button>
+        <Button @click="remove">删除标签</Button>
       </div>
     </Layout>
   </div>
@@ -47,6 +47,7 @@ export default class EditLabel extends Vue {
     if (confirm('你确定要删除这个标签吗？')) {
       if (this.tag) {
         window.removeTag(this.tag.id)
+        this.goBack()
       }
     } else {
       return
@@ -69,8 +70,6 @@ export default class EditLabel extends Vue {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  > .title {
-  }
   > .leftIcon {
     width: 24px;
     height: 24px;
