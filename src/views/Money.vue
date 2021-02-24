@@ -63,18 +63,11 @@ export default class Money extends Vue {
     console.log(value)
   }
   saveRecord() {
-    const record2 = recordListModel.clone(this.record)
-    record2.createdAt = new Date()
-    this.recordList.push(record2)
-    console.log(this.recordList)
+    recordListModel.create(this.record)
   }
   @Watch('recordList')
   onRecordListChange() {
-    recordListModel.save(this.recordList)
-  }
-  @Watch('recordList')
-  bianhua() {
-    this.tags = tagListModel.fetch()
+    recordListModel.save()
   }
 }
 </script>
