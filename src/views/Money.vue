@@ -72,6 +72,10 @@ export default class Money extends Vue {
   onRecordListChange() {
     recordListModel.save(this.recordList)
   }
+  @Watch('recordList')
+  bianhua() {
+    this.tags = tagListModel.fetch()
+  }
 }
 </script>
 
