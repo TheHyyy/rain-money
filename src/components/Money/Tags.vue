@@ -17,12 +17,18 @@
 </template>
 
 <script lang="ts">
-import store from '@/store/index2'
 import Vue from 'vue'
 import { Component, Prop } from 'vue-property-decorator'
-@Component
+@Component({
+  computed: {
+    tagList() {
+      // TODO
+      // return this.$store.fetchTags()
+      return []
+    },
+  },
+})
 export default class Tags extends Vue {
-  tagList = store.fetchTags()
   selectedTags: string[] = []
   // 标签选中与取消
   toggle(tag: string) {
@@ -42,7 +48,8 @@ export default class Tags extends Vue {
     } else if (name === null) {
       return
     }
-    store.createTag(name)
+    // TODO
+    // store.createTag(name)
   }
 }
 </script>
