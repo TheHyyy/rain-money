@@ -13,20 +13,6 @@ type TagListModel = {
   save: () => void;
   remove: (id: string) => boolean;
 }
-interface Window {
-  tagList: Tag[];
-  createTag: (name: string) => void;
-  removeTag: (id: string) => boolean;
-  // updateTag: TagListModel['update']
-  updateTag: (
-    id: string,
-    name: string,
-  ) => 'success' | 'not found' | 'duplicated';
-  findTag: (id: string) => Tag | undefined;
-  recordList: RecordItem[];
-  createRecord: (record: RecordItem) => void;
-}
-const localStorageKeyName = 'tagList'
 type RecordItem = {
   tags: string[];
   notes: string;
