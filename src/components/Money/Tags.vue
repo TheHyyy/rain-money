@@ -22,14 +22,15 @@ import { Component, Prop } from 'vue-property-decorator'
 @Component({
   computed: {
     tagList() {
-      // TODO
-      // return this.$store.fetchTags()
-      return []
+      return this.$store.state.tagList
     },
   },
 })
 export default class Tags extends Vue {
   selectedTags: string[] = []
+  created() {
+    this.$store.commit('fetchTags')
+  }
   // 标签选中与取消
   toggle(tag: string) {
     const index = this.selectedTags.indexOf(tag)
@@ -48,8 +49,7 @@ export default class Tags extends Vue {
     } else if (name === null) {
       return
     }
-    // TODO
-    // store.createTag(name)
+    this.$store.commit('createTag', name)
   }
 }
 </script>
