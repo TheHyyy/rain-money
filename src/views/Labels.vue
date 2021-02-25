@@ -28,15 +28,21 @@ import Button from '@/components/Button.vue'
   components: { Button },
 })
 export default class Labels extends Vue {
-  // TODO
-  tags = [] // store.tagList
-
+  get tags() {
+    return this.$store.state.tagList
+  }
+  beforeCreate() {
+    this.$store.commit('fetchTags')
+  }
   createTag() {
     const name = window.prompt('请输入标签名')
-    if (name) {
-      // TODO
-      // store.createTag(name)
+    console.log(name)
+    if (name === '') {
+      return window.alert('标签名不能为空')
+    } else if (name === null) {
+      return
     }
+    this.$store.commit('createTag', name)
   }
 }
 </script>
