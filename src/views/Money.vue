@@ -36,6 +36,7 @@ type RecordItem = {
 
 @Component({
   components: { Tags, FormItem, Types, NumberPad },
+  computed: {},
 })
 export default class Money extends Vue {
   record: RecordItem = { tags: [], notes: '', type: '-', amount: 0 }
