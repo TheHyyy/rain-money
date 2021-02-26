@@ -62,7 +62,7 @@ export default class Tags extends Vue {
     display: flex;
     flex-wrap: wrap;
     > li {
-      $bg: #d9d9d9;
+      $bg: #f5f5f5;
       background: $bg;
       $h: 24px;
       height: $h;
