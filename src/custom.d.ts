@@ -1,5 +1,5 @@
 type RecordItem = {
-  tags: string[];
+  tags: Tag[];
   notes: string;
   type: string;
   amount: number; // 数据类型 object | string
@@ -18,13 +18,7 @@ type TagListModel = {
   save: () => void;
   remove: (id: string) => boolean;
 }
-type RecordItem = {
-  tags: string[];
-  notes: string;
-  type: string;
-  amount: number;
-  created?: Date;
-}
+
 type Tag = {
   id: string;
   name: string;
