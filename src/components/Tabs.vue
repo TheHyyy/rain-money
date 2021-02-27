@@ -38,7 +38,7 @@ export default class Tabs extends Vue {
   display: flex;
   text-align: center;
   font-size: 24px;
-  color: #1296db;
+  background: #c4c4c4;
   > li {
     width: 50%;
     height: 64px;
@@ -55,10 +55,11 @@ export default class Tabs extends Vue {
       left: 0;
       width: 100%;
       height: 4px;
+      background: #1296db;
     }
     &.selected {
-      background: #1296db;
-      color: white;
+      // background: red;
+      // color: white;
     }
   }
 }

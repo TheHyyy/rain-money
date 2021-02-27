@@ -1,6 +1,7 @@
 <template>
   <Layout>
     <Tabs
+      class="tabsClass"
       class-prefix="type"
       :data-source="recordTypeList"
       :value.sync="type"
@@ -118,9 +119,14 @@ export default class Statistics extends Vue {
   .type-tabs-item {
     background: #c4c4c4;
     &.selected {
-      background: white;
       &::after {
-        display: none;
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: #1296db;
       }
     }
   }
@@ -147,8 +153,10 @@ export default class Statistics extends Vue {
   margin-left: 16px;
   color: #999;
 }
-.noResult {
+.no-result {
   padding: 16px;
   text-align: center;
+}
+.tabsClass {
 }
 </style>
