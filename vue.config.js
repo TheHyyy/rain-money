@@ -1,9 +1,10 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const path = require('path')
+console.log(process.env.NODE_ENV)
 
 module.exports = {
   publicPath:
-    process.env.NODE_ENV === 'production' ? '/rain-money-website/' : '/',
+    process.env.NODE_ENV === 'production' ? '/rain-money-website/' : '',
   lintOnSave: false,
   chainWebpack: (config) => {
     const dir = path.resolve(__dirname, 'src/assets/icons')
