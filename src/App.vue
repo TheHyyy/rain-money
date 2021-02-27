@@ -19,6 +19,7 @@ body {
 #app {
   max-width: 480px;
   margin: 0 auto;
-  box-shadow: 0 15px 3px #777;
+  box-shadow: 0 3px 1px #777;
+  min-height: 100vh;
 }
 </style>
