@@ -55,8 +55,6 @@ export default class Money extends Vue {
 
   onUpdateAmount(value: string) {
     this.record.amount = parseFloat(value)
-    console.log('我是Amount')
-    console.log(value)
   }
   saveRecord() {
     if (!this.record.tags.length || this.record.tags.length === 0) {
