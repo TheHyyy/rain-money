@@ -19,6 +19,6 @@ body {
 #app {
   max-width: 480px;
   margin: 0 auto;
-  box-shadow: 0 15px 7px #777;
+  box-shadow: 0 15px 3px #777;
 }
 </style>
