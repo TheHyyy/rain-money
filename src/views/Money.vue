@@ -75,6 +75,13 @@ export default class Money extends Vue {
 .t {
   position: absolute;
   top: 0;
-  width: 100%;
+  width: 480px;
+}
+@media (max-width: 500px) {
+  .t {
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
 }
 </style>
