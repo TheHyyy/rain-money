@@ -22,7 +22,7 @@ import FormItem from '@/components/Money/FormItem.vue'
 import Tags from '@/components/Money/Tags.vue'
 import Tabs from '@/components/Tabs.vue'
 import { Component } from 'vue-property-decorator'
-import recordTypeList from '@/constants/recordTypeList.ts'
+import recordTypeList from '@/constants/recordTypeList'
 type RecordItem = {
   // eslint-disable-next-line @typescript-eslint/member-delimiter-style
   tags: string[]
@@ -58,7 +58,7 @@ export default class Money extends Vue {
   }
   saveRecord() {
     if (!this.record.tags.length || this.record.tags.length === 0) {
-      return window.alert('请至少选择一个标签')
+      return window.alert('请选择一个标签并重新输入数字')
     }
     this.$store.commit('createRecord', this.record)
     window.alert('已保存')

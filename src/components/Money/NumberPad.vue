@@ -72,6 +72,10 @@ export default class NumberPad extends Vue {
   // 提交 ok事件
   ok() {
     const number = parseFloat(this.output)
+    if (number === 0) {
+      alert('不可输入为0')
+      return
+    }
     this.$emit('update:value', number)
     this.$emit('submit', number)
     this.output = '0'
