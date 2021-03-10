@@ -58,7 +58,7 @@ export default class Money extends Vue {
   }
   saveRecord() {
     if (!this.record.tags.length || this.record.tags.length === 0) {
-      return window.alert('请选择一个标签并重新输入数字')
+      return window.alert('请选择标签并重新输入数字')
     }
     this.$store.commit('createRecord', this.record)
     window.alert('已保存')
