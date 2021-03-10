@@ -62,7 +62,7 @@ export default class Types extends Vue {
       left: 0;
       width: 100%;
       height: 4px;
-      background: #1296db;
+      background: #f0f4f7;
     }
   }
 }

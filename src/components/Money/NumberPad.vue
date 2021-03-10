@@ -112,37 +112,71 @@ export default class NumberPad extends Vue {
         width: 25 * 2%;
       }
       $bg: #fff;
-      &:nth-child(1) {
-        background: $bg;
-      }
-      &:nth-child(2),
-      &:nth-child(5) {
-        background: darken($bg, 1%);
-      }
-      &:nth-child(3),
-      &:nth-child(6),
-      &:nth-child(9) {
-        background: darken($bg, 2 * 1%);
-      }
-      &:nth-child(4),
-      &:nth-child(7),
-      &:nth-child(10) {
-        background: darken($bg, 2 * 1.5%);
-      }
-      &:nth-child(8),
-      &:nth-child(11),
-      &:nth-child(13) {
-        background: darken($bg, 2 * 2%);
-      }
-      &:nth-child(14) {
-        background: darken($bg, 2 * 2.5%);
+      & {
+        background: #f0f4f7;
+        border: 0.2px solid #f4eeee;
       }
       &:nth-child(12) {
-        background: darken($bg, 2 * 3%);
+        background: #1296db;
+        color: white;
+        border: 0px solid #eee;
+        border-radius: 4px;
       }
-      &.dian {
-        font-size: 30px;
+      // &:nth-child(1) {
+      //   background: $bg;
+      // }
+      // &:nth-child(2),
+      &:nth-child(1) {
+        border-left: 0px;
       }
+      &:nth-child(5) {
+        border-left: 0px;
+      }
+      &:nth-child(9) {
+        border-left: 0px;
+      }
+      &:nth-child(13) {
+        border-left: 0px;
+        border-bottom: 0px;
+      }
+      &:nth-child(14) {
+        border-bottom: 0px;
+      }
+
+      &:nth-child(4) {
+        border-right: 0px;
+      }
+      &:nth-child(8) {
+        border-right: 0px;
+      }
+      &:nth-child(12) {
+        border-right: 0px;
+        border-bottom: 0px;
+      }
+      // &:nth-child(3),
+      // &:nth-child(6),
+      // &:nth-child(9) {
+      //   background: darken($bg, 2 * 1%);
+      // }
+      // &:nth-child(4),
+      // &:nth-child(7),
+      // &:nth-child(10) {
+      //   background: darken($bg, 2 * 1.5%);
+      // }
+      // &:nth-child(8),
+      // &:nth-child(11),
+      // &:nth-child(13) {
+      //   background: darken($bg, 2 * 2%);
+      // }
+      // &:nth-child(14) {
+      //   background: darken($bg, 2 * 2.5%);
+      // }
+      // &:nth-child(12) {
+      //   background: darken($bg, 2 * 3%);
+      // }
+      // &.dian {
+      //   font-size: 30px;
+      // }
     }
   }
 }

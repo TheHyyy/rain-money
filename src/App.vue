@@ -14,7 +14,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   color: #1296db;
-  background-color: #fbfbff;
+  background-color: white;
 }
 #app {
   max-width: 480px;

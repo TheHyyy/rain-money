@@ -30,7 +30,7 @@ export default class FormItem extends Vue {
 <style lang="scss" scoped>
 .notes {
   font-size: 14px;
-  background: #f5f5f5;
+  background: #f0f4f7;
   padding-left: 16px;
   display: flex;
   align-items: center;
